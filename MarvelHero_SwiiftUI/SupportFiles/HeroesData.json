@@ -1,0 +1,93 @@
+//
+//  HeroesData.swift
+//  MarvelHero_SwiiftUI
+//
+//  Created by Diego Herreros Parron on 17/12/24.
+//
+
+{
+  "code": 200,
+  "status": "Ok",
+  "copyright": "© 2024 MARVEL",
+  "attributionText": "Data provided by Marvel. © 2024 MARVEL",
+  "attributionHTML": "<a href=\"http://marvel.com\">Data provided by Marvel. © 2024 MARVEL</a>",
+  "etag": "a0599f022f90c8fb475805dfcc709e69d9a8ef9a",
+  "data": {
+    "offset": 0,
+    "limit": 20,
+    "total": 1564,
+    "count": 20,
+    "results": [
+      {
+        "id": 1009550,
+        "name": "Bart Rozum",
+        "description": "",
+        "modified": "2024-10-21T15:32:30-0400",
+        "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
+          "extension": "jpg"
+        },
+        "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009550",
+        "comics": {
+          "available": 2,
+          "collectionURI": "http://gateway.marvel.com/v1/public/characters/1009550/comics",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/84374",
+              "name": "Damage Control (2022) #3"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/84376",
+              "name": "Damage Control (2022) #5"
+            }
+          ],
+          "returned": 2
+        },
+        "series": {
+          "available": 1,
+          "collectionURI": "http://gateway.marvel.com/v1/public/characters/1009550/series",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/29703",
+              "name": "Damage Control (2022)"
+            }
+          ],
+          "returned": 1
+        },
+        "stories": {
+          "available": 2,
+          "collectionURI": "http://gateway.marvel.com/v1/public/characters/1009550/stories",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/186545",
+              "name": "cover from Damage Control (2029) #3",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/186549",
+              "name": "cover from Damage Control (2029) #5",
+              "type": "cover"
+            }
+          ],
+          "returned": 2
+        },
+        "events": {
+          "available": 0,
+          "collectionURI": "http://gateway.marvel.com/v1/public/characters/1009550/events",
+          "items": [],
+          "returned": 0
+        },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/2765/bart_rozum?utm_campaign=apiRef&utm_source=3a1dae965b132b86c92b22da6ae7ba5b"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1009550/bart_rozum?utm_campaign=apiRef&utm_source=3a1dae965b132b86c92b22da6ae7ba5b"
+          }
+        ]
+      }
+    ]
+  }
+}

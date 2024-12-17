@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - HerosModel
-struct HerosModel: Codable {
+struct HerosModel: Decodable{
     let code: Int
     let status, copyright, attributionText, attributionHTML: String
     let etag: String
@@ -22,16 +22,21 @@ struct DataClass: Codable {
 }
 
 // MARK: - Result
-struct Result: Codable {
+struct Result: Codable , Identifiable{
     let id: Int
     let name, description: String
-    let modified: Date
+    let modified: String
     let thumbnail: Thumbnail
     let resourceURI: String
     let comics, series: Comics
     let stories: Stories
     let events: Comics
     let urls: [URLElement]
+    
+    var imageUrl: URL? {
+           let urlString = "\(thumbnail.path).\(thumbnail.thumbnailExtension.rawValue)"
+           return URL(string: urlString)
+       }
 }
 
 // MARK: - Comics

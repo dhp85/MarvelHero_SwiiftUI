@@ -20,14 +20,17 @@ protocol NetworkHerosProtocol {
 final class NetworkHeros: NetworkHerosProtocol {
     func getHeros() async throws -> [Result] {
         
-        let baseURL = "\(ConstantApp.CONSTANT_API_URL)\(EndPoints.characters.rawValue)"
+        let baseURL = "\(ConstantApp.CONSTANT_API_URL)\(EndPoints.characters.rawValue)\(EndPoints.hash.rawValue)"
         var request = URLRequest(url: URL(string: baseURL)!)
         request.httpMethod = "GET"
         
         do {
             let (data, response) = try await URLSession.shared.data(for: request)
             if (response.getResponseCode() == HttpResponseCodes.SUCESS){
-                return try JSONDecoder().decode([Result].self, from: data)
+                let listCharacter = try! JSONDecoder().decode(HerosModel.self, from: data)
+                print(listCharacter)
+                return listCharacter.data.results
+                
             } else {
                 throw NetworkHerosError.invalidResponse
             }
@@ -36,5 +39,42 @@ final class NetworkHeros: NetworkHerosProtocol {
             throw NetworkHerosError.invalidData
         }
         
+    }
+}
+
+
+final class NetworkHerosMock: NetworkHerosProtocol {
+    func getHeros() async throws -> [Result] {
+        // Crear un par de héroes mock
+        let hero1 = Result(
+            id: 1001,
+            name: "Spider-Man",
+            description: "A hero with spider-like abilities.",
+            modified: "2024-10-21T15:32:30-0400",
+            thumbnail: Thumbnail(path: "http://i.annihil.us/u/prod/marvel/i/mg/a/c0/66f2d68d99dc8", thumbnailExtension: .jpg),
+            resourceURI: "http://gateway.marvel.com/v1/public/characters/1001",
+            comics: Comics(available: 10, collectionURI: "http://gateway.marvel.com/comics", items: [], returned: 10),
+            series: Comics(available: 5, collectionURI: "http://gateway.marvel.com/series", items: [], returned: 5),
+            stories: Stories(available: 3, collectionURI: "http://gateway.marvel.com/stories", items: [], returned: 3),
+            events: Comics(available: 2, collectionURI: "http://gateway.marvel.com/events", items: [], returned: 2),
+            urls: [URLElement(type: .detail, url: "https://marvel.com/characters/1001/spider-man")]
+        )
+
+        let hero2 = Result(
+            id: 1002,
+            name: "Iron Man",
+            description: "A genius inventor and billionaire philanthropist.",
+            modified: "2024-10-22T15:32:30-0400",
+            thumbnail: Thumbnail(path: "https://example.com/iron-man", thumbnailExtension: .jpg),
+            resourceURI: "http://gateway.marvel.com/v1/public/characters/1002",
+            comics: Comics(available: 8, collectionURI: "http://gateway.marvel.com/comics", items: [], returned: 8),
+            series: Comics(available: 4, collectionURI: "http://gateway.marvel.com/series", items: [], returned: 4),
+            stories: Stories(available: 5, collectionURI: "http://gateway.marvel.com/stories", items: [], returned: 5),
+            events: Comics(available: 1, collectionURI: "http://gateway.marvel.com/events", items: [], returned: 1),
+            urls: [URLElement(type: .detail, url: "https://marvel.com/characters/1002/iron-man")]
+        )
+
+        // Retornar los héroes simulados
+        return [hero1, hero2]
     }
 }
