@@ -6,6 +6,20 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		F7CFD4FB2D11C60C0061158C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7CFD4F42D11C60C0061158C /* Preview Assets.xcassets */; };
+		F7CFD4FC2D11C60C0061158C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7CFD4F62D11C60C0061158C /* Assets.xcassets */; };
+		F7CFD4FD2D11C60C0061158C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CFD4F72D11C60C0061158C /* ContentView.swift */; };
+		F7CFD4FE2D11C60C0061158C /* MarvelHero_SwiiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CFD4F92D11C60C0061158C /* MarvelHero_SwiiftUIApp.swift */; };
+		F7CFD50B2D11C6460061158C /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CFD5072D11C6460061158C /* Models.swift */; };
+		F7CFD50C2D11C6460061158C /* Extension+URLRespnse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CFD5022D11C6460061158C /* Extension+URLRespnse.swift */; };
+		F7CFD50D2D11C6460061158C /* ConstantApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CFD5052D11C6460061158C /* ConstantApp.swift */; };
+		F7CFD5162D11C68F0061158C /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CFD5112D11C68F0061158C /* EndPoints.swift */; };
+		F7CFD5172D11C68F0061158C /* HttpMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CFD5102D11C68F0061158C /* HttpMethods.swift */; };
+		F7CFD5182D11C68F0061158C /* NetworkHeros.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CFD50E2D11C68F0061158C /* NetworkHeros.swift */; };
+		F7CFD5192D11C68F0061158C /* HttpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CFD50F2D11C68F0061158C /* HttpResponse.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		F7CFD4D22D11C5710061158C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,14 +41,21 @@
 		F7CFD4C02D11C5700061158C /* MarvelHero_SwiiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelHero_SwiiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7CFD4D12D11C5710061158C /* MarvelHero_SwiiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarvelHero_SwiiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7CFD4DB2D11C5710061158C /* MarvelHero_SwiiftUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarvelHero_SwiiftUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7CFD4F42D11C60C0061158C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F7CFD4F62D11C60C0061158C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F7CFD4F72D11C60C0061158C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F7CFD4F82D11C60C0061158C /* MarvelHero_SwiiftUI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MarvelHero_SwiiftUI.entitlements; sourceTree = "<group>"; };
+		F7CFD4F92D11C60C0061158C /* MarvelHero_SwiiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelHero_SwiiftUIApp.swift; sourceTree = "<group>"; };
+		F7CFD5022D11C6460061158C /* Extension+URLRespnse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+URLRespnse.swift"; sourceTree = "<group>"; };
+		F7CFD5052D11C6460061158C /* ConstantApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantApp.swift; sourceTree = "<group>"; };
+		F7CFD5072D11C6460061158C /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		F7CFD50E2D11C68F0061158C /* NetworkHeros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHeros.swift; sourceTree = "<group>"; };
+		F7CFD50F2D11C68F0061158C /* HttpResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpResponse.swift; sourceTree = "<group>"; };
+		F7CFD5102D11C68F0061158C /* HttpMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMethods.swift; sourceTree = "<group>"; };
+		F7CFD5112D11C68F0061158C /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		F7CFD4C22D11C5700061158C /* MarvelHero_SwiiftUI */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = MarvelHero_SwiiftUI;
-			sourceTree = "<group>";
-		};
 		F7CFD4D42D11C5710061158C /* MarvelHero_SwiiftUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = MarvelHero_SwiiftUITests;
@@ -75,7 +96,7 @@
 		F7CFD4B72D11C5700061158C = {
 			isa = PBXGroup;
 			children = (
-				F7CFD4C22D11C5700061158C /* MarvelHero_SwiiftUI */,
+				F7CFD4FA2D11C60C0061158C /* MarvelHero_SwiiftUI */,
 				F7CFD4D42D11C5710061158C /* MarvelHero_SwiiftUITests */,
 				F7CFD4DE2D11C5710061158C /* MarvelHero_SwiiftUIUITests */,
 				F7CFD4C12D11C5700061158C /* Products */,
@@ -92,6 +113,145 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		F7CFD4F52D11C60C0061158C /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				F7CFD4F42D11C60C0061158C /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F7CFD4FA2D11C60C0061158C /* MarvelHero_SwiiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				F7CFD4F82D11C60C0061158C /* MarvelHero_SwiiftUI.entitlements */,
+				F7CFD5012D11C6390061158C /* Presentation */,
+				F7CFD50A2D11C6460061158C /* Domain */,
+				F7CFD5152D11C68F0061158C /* Data */,
+				F7CFD4F52D11C60C0061158C /* Preview Content */,
+				F7CFD51A2D11C6D40061158C /* SupportFiles */,
+			);
+			path = MarvelHero_SwiiftUI;
+			sourceTree = "<group>";
+		};
+		F7CFD4FF2D11C6390061158C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F7CFD5002D11C6390061158C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F7CFD5012D11C6390061158C /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				F7CFD4FF2D11C6390061158C /* ViewModel */,
+				F7CFD5002D11C6390061158C /* View */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		F7CFD5032D11C6460061158C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F7CFD5022D11C6460061158C /* Extension+URLRespnse.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F7CFD5042D11C6460061158C /* Protocolos  */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Protocolos ";
+			sourceTree = "<group>";
+		};
+		F7CFD5062D11C6460061158C /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				F7CFD5052D11C6460061158C /* ConstantApp.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		F7CFD5082D11C6460061158C /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				F7CFD5072D11C6460061158C /* Models.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		F7CFD5092D11C6460061158C /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		F7CFD50A2D11C6460061158C /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				F7CFD5032D11C6460061158C /* Extensions */,
+				F7CFD5042D11C6460061158C /* Protocolos  */,
+				F7CFD5062D11C6460061158C /* Tools */,
+				F7CFD5082D11C6460061158C /* Entities */,
+				F7CFD5092D11C6460061158C /* UseCase */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		F7CFD5122D11C68F0061158C /* BaseNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				F7CFD50F2D11C68F0061158C /* HttpResponse.swift */,
+				F7CFD5102D11C68F0061158C /* HttpMethods.swift */,
+				F7CFD5112D11C68F0061158C /* EndPoints.swift */,
+			);
+			path = BaseNetwork;
+			sourceTree = "<group>";
+		};
+		F7CFD5132D11C68F0061158C /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		F7CFD5142D11C68F0061158C /* Local */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		F7CFD5152D11C68F0061158C /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				F7CFD50E2D11C68F0061158C /* NetworkHeros.swift */,
+				F7CFD5122D11C68F0061158C /* BaseNetwork */,
+				F7CFD5132D11C68F0061158C /* Repository */,
+				F7CFD5142D11C68F0061158C /* Local */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		F7CFD51A2D11C6D40061158C /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				F7CFD4F72D11C60C0061158C /* ContentView.swift */,
+				F7CFD4F62D11C60C0061158C /* Assets.xcassets */,
+				F7CFD4F92D11C60C0061158C /* MarvelHero_SwiiftUIApp.swift */,
+			);
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +266,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				F7CFD4C22D11C5700061158C /* MarvelHero_SwiiftUI */,
 			);
 			name = MarvelHero_SwiiftUI;
 			packageProductDependencies = (
@@ -212,6 +369,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7CFD4FB2D11C60C0061158C /* Preview Assets.xcassets in Resources */,
+				F7CFD4FC2D11C60C0061158C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +395,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7CFD4FD2D11C60C0061158C /* ContentView.swift in Sources */,
+				F7CFD4FE2D11C60C0061158C /* MarvelHero_SwiiftUIApp.swift in Sources */,
+				F7CFD50B2D11C6460061158C /* Models.swift in Sources */,
+				F7CFD50C2D11C6460061158C /* Extension+URLRespnse.swift in Sources */,
+				F7CFD5162D11C68F0061158C /* EndPoints.swift in Sources */,
+				F7CFD5172D11C68F0061158C /* HttpMethods.swift in Sources */,
+				F7CFD5182D11C68F0061158C /* NetworkHeros.swift in Sources */,
+				F7CFD5192D11C68F0061158C /* HttpResponse.swift in Sources */,
+				F7CFD50D2D11C6460061158C /* ConstantApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
