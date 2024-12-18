@@ -21,8 +21,9 @@
 		F7CFD5242D11D6090061158C /* DefaultHerosRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CFD5232D11D5EE0061158C /* DefaultHerosRepository.swift */; };
 		F7CFD5272D11D7020061158C /* HerosUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CFD5262D11D6FB0061158C /* HerosUseCase.swift */; };
 		F7CFD5292D11E1270061158C /* HerosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CFD5282D11E1190061158C /* HerosViewModel.swift */; };
-		F7CFD52B2D11E2680061158C /* HeroesData.json in Sources */ = {isa = PBXBuildFile; fileRef = F7CFD52A2D11E25A0061158C /* HeroesData.json */; };
 		F7CFD52D2D11EBB20061158C /* HerosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CFD52C2D11EBB20061158C /* HerosView.swift */; };
+		F7D464D82D1328A400130D34 /* HerosRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D464D72D1328A400130D34 /* HerosRowView.swift */; };
+		F7D464DA2D13361500130D34 /* HerosDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D464D92D13361500130D34 /* HerosDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,8 +62,10 @@
 		F7CFD5232D11D5EE0061158C /* DefaultHerosRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultHerosRepository.swift; sourceTree = "<group>"; };
 		F7CFD5262D11D6FB0061158C /* HerosUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerosUseCase.swift; sourceTree = "<group>"; };
 		F7CFD5282D11E1190061158C /* HerosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerosViewModel.swift; sourceTree = "<group>"; };
-		F7CFD52A2D11E25A0061158C /* HeroesData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = HeroesData.json; sourceTree = "<group>"; };
 		F7CFD52C2D11EBB20061158C /* HerosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerosView.swift; sourceTree = "<group>"; };
+		F7D464C52D12F0FA00130D34 /* MarvelHero-SwiiftUI-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "MarvelHero-SwiiftUI-Info.plist"; sourceTree = SOURCE_ROOT; };
+		F7D464D72D1328A400130D34 /* HerosRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerosRowView.swift; sourceTree = "<group>"; };
+		F7D464D92D13361500130D34 /* HerosDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerosDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -134,6 +137,7 @@
 		F7CFD4FA2D11C60C0061158C /* MarvelHero_SwiiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				F7D464C52D12F0FA00130D34 /* MarvelHero-SwiiftUI-Info.plist */,
 				F7CFD4F82D11C60C0061158C /* MarvelHero_SwiiftUI.entitlements */,
 				F7CFD5012D11C6390061158C /* Presentation */,
 				F7CFD50A2D11C6460061158C /* Domain */,
@@ -156,6 +160,8 @@
 			isa = PBXGroup;
 			children = (
 				F7CFD52C2D11EBB20061158C /* HerosView.swift */,
+				F7D464D72D1328A400130D34 /* HerosRowView.swift */,
+				F7D464D92D13361500130D34 /* HerosDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -260,7 +266,6 @@
 		F7CFD51A2D11C6D40061158C /* SupportFiles */ = {
 			isa = PBXGroup;
 			children = (
-				F7CFD52A2D11E25A0061158C /* HeroesData.json */,
 				F7CFD4F62D11C60C0061158C /* Assets.xcassets */,
 				F7CFD4F92D11C60C0061158C /* MarvelHero_SwiiftUIApp.swift */,
 			);
@@ -410,13 +415,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7CFD52B2D11E2680061158C /* HeroesData.json in Sources */,
 				F7CFD4FE2D11C60C0061158C /* MarvelHero_SwiiftUIApp.swift in Sources */,
 				F7CFD50B2D11C6460061158C /* Models.swift in Sources */,
 				F7CFD5292D11E1270061158C /* HerosViewModel.swift in Sources */,
 				F7CFD50C2D11C6460061158C /* Extension+URLRespnse.swift in Sources */,
 				F7CFD52D2D11EBB20061158C /* HerosView.swift in Sources */,
 				F7CFD5162D11C68F0061158C /* EndPoints.swift in Sources */,
+				F7D464D82D1328A400130D34 /* HerosRowView.swift in Sources */,
 				F7CFD5172D11C68F0061158C /* HttpMethods.swift in Sources */,
 				F7CFD5182D11C68F0061158C /* NetworkHeros.swift in Sources */,
 				F7CFD5222D11D5B20061158C /* HeroRepositoryProtocol.swift in Sources */,
@@ -424,6 +429,7 @@
 				F7CFD5192D11C68F0061158C /* HttpResponse.swift in Sources */,
 				F7CFD50D2D11C6460061158C /* ConstantApp.swift in Sources */,
 				F7CFD5272D11D7020061158C /* HerosUseCase.swift in Sources */,
+				F7D464DA2D13361500130D34 /* HerosDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -582,6 +588,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"MarvelHero_SwiiftUI/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MarvelHero-SwiiftUI-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -591,7 +599,6 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -619,6 +626,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"MarvelHero_SwiiftUI/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MarvelHero-SwiiftUI-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -628,7 +637,6 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";

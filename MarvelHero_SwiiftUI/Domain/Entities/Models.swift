@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - HerosModel
-struct HerosModel: Decodable{
+struct HerosModel: Codable {
     let code: Int
     let status, copyright, attributionText, attributionHTML: String
     let etag: String
@@ -22,7 +22,7 @@ struct DataClass: Codable {
 }
 
 // MARK: - Result
-struct Result: Codable , Identifiable{
+struct Result: Codable, Identifiable {
     let id: Int
     let name, description: String
     let modified: String
@@ -34,9 +34,9 @@ struct Result: Codable , Identifiable{
     let urls: [URLElement]
     
     var imageUrl: URL? {
-           let urlString = "\(thumbnail.path).\(thumbnail.thumbnailExtension.rawValue)"
-           return URL(string: urlString)
-       }
+               let urlString = "\(thumbnail.path)/landscape_amazing.\(thumbnail.thumbnailExtension.rawValue)"
+               return URL(string: urlString)
+           }
 }
 
 // MARK: - Comics
@@ -72,6 +72,7 @@ enum ItemType: String, Codable {
     case cover = "cover"
     case empty = ""
     case interiorStory = "interiorStory"
+    case pinup = "pinup"
 }
 
 // MARK: - Thumbnail
@@ -86,6 +87,7 @@ struct Thumbnail: Codable {
 }
 
 enum Extension: String, Codable {
+    case gif = "gif"
     case jpg = "jpg"
 }
 

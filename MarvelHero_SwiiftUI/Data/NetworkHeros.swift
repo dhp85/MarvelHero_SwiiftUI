@@ -45,13 +45,13 @@ final class NetworkHeros: NetworkHerosProtocol {
 
 final class NetworkHerosMock: NetworkHerosProtocol {
     func getHeros() async throws -> [Result] {
-        // Crear un par de héroes mock
+       
         let hero1 = Result(
             id: 1001,
-            name: "Spider-Man",
+            name: "3D-Man",
             description: "A hero with spider-like abilities.",
             modified: "2024-10-21T15:32:30-0400",
-            thumbnail: Thumbnail(path: "http://i.annihil.us/u/prod/marvel/i/mg/a/c0/66f2d68d99dc8", thumbnailExtension: .jpg),
+            thumbnail: Thumbnail(path: "http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784", thumbnailExtension: .jpg),
             resourceURI: "http://gateway.marvel.com/v1/public/characters/1001",
             comics: Comics(available: 10, collectionURI: "http://gateway.marvel.com/comics", items: [], returned: 10),
             series: Comics(available: 5, collectionURI: "http://gateway.marvel.com/series", items: [], returned: 5),
@@ -62,10 +62,10 @@ final class NetworkHerosMock: NetworkHerosProtocol {
 
         let hero2 = Result(
             id: 1002,
-            name: "Iron Man",
+            name: "A-Bomb",
             description: "A genius inventor and billionaire philanthropist.",
             modified: "2024-10-22T15:32:30-0400",
-            thumbnail: Thumbnail(path: "https://example.com/iron-man", thumbnailExtension: .jpg),
+            thumbnail: Thumbnail(path: "http://i.annihil.us/u/prod/marvel/i/mg/3/20/5232158de5b16", thumbnailExtension: .jpg),
             resourceURI: "http://gateway.marvel.com/v1/public/characters/1002",
             comics: Comics(available: 8, collectionURI: "http://gateway.marvel.com/comics", items: [], returned: 8),
             series: Comics(available: 4, collectionURI: "http://gateway.marvel.com/series", items: [], returned: 4),

@@ -17,12 +17,25 @@ struct HerosView: View {
     }
     
     var body: some View {
-        List {
-            ForEach(vm.heros) { hero in
-                Text(hero.name)
-                AsyncImage(url: hero.imageUrl)
+        NavigationStack {
+            ScrollView {
+                LazyVStack {
+                    ForEach(vm.heros, id: \.id) { hero in
+                        NavigationLink {
+                            Text("Detalle: \(hero.name)")
+                        } label: {
+                            HerosRowView(hero: hero)
+                        }
+                        .padding(20)
+                        .buttonStyle(PlainButtonStyle())
+                    }
+                }
             }
+            .navigationTitle("Heroes")
         }
+      
+        
+        
          
     }
 }
