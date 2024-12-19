@@ -22,7 +22,8 @@ struct HerosView: View {
                 LazyVStack {
                     ForEach(vm.heros, id: \.id) { hero in
                         NavigationLink {
-                            Text("Detalle: \(hero.name)")
+                            SeriesView(vm: SeriesViewModel(idHero: hero.id))
+                           // Text("\(hero.id)")
                         } label: {
                             HerosRowView(hero: hero)
                         }
@@ -33,10 +34,6 @@ struct HerosView: View {
             }
             .navigationTitle("Heroes")
         }
-      
-        
-        
-         
     }
 }
 

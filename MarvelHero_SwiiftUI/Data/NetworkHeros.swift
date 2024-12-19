@@ -28,7 +28,6 @@ final class NetworkHeros: NetworkHerosProtocol {
             let (data, response) = try await URLSession.shared.data(for: request)
             if (response.getResponseCode() == HttpResponseCodes.SUCESS){
                 let listCharacter = try! JSONDecoder().decode(HerosModel.self, from: data)
-                print(listCharacter)
                 return listCharacter.data.results
                 
             } else {

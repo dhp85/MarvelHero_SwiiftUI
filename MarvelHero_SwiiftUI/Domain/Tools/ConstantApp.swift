@@ -9,4 +9,5 @@ import Foundation
 
 struct ConstantApp {
     static let CONSTANT_API_URL: String = "https://gateway.marvel.com//v1/public/"
+    static let CONSTANT_API_URL_SERIES: String = "https://gateway.marvel.com//v1/public/characters/"
 }
