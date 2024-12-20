@@ -42,7 +42,3 @@ final class MarvelHero_SwiiftUITests {
 
 }
 
-/*var imageUrl: URL? {
- let urlString = "\(thumbnail.path)/landscape_amazing.\(thumbnail.thumbnailExtension.rawValue)"
- return URL(string: urlString)
-}*/

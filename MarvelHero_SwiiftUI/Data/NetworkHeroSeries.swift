@@ -16,7 +16,7 @@ final class NetworkHeroSeries: NetworkHeroSeriesProtocol {
     
     func getSeriesHero(idHero: Int) async throws -> [ResultSeries] {
         
-        let baseURL = "\(ConstantApp.CONSTANT_API_URL_SERIES)/\(idHero)/\(EndPoints.series.rawValue)\(EndPoints.hash.rawValue)"
+        let baseURL = "\(ConstantApp.CONSTANT_API_URL_SERIES)/\(idHero)/\(EndPoints.series.rawValue)\(ConstantApp.API_KEY)\(EndPoints.hash.rawValue)\(ConstantApp.HASH)"
         var request = URLRequest(url: URL(string: baseURL)!)
         request.httpMethod = "GET"
         

@@ -20,7 +20,7 @@ protocol NetworkHerosProtocol {
 final class NetworkHeros: NetworkHerosProtocol {
     func getHeros() async throws -> [ResultHeros] {
         
-        let baseURL = "\(ConstantApp.CONSTANT_API_URL)\(EndPoints.characters.rawValue)\(EndPoints.hash.rawValue)"
+        let baseURL = "\(ConstantApp.CONSTANT_API_URL)\(EndPoints.characters.rawValue)\(ConstantApp.API_KEY)\(EndPoints.hash.rawValue)\(ConstantApp.HASH)"
         var request = URLRequest(url: URL(string: baseURL)!)
         request.httpMethod = "GET"
         
