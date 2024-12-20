@@ -11,7 +11,7 @@ import Foundation
 final class HerosViewModel {
     
     
-    var heros: [Result] = []
+    var heros: [ResultHeros] = []
     
     @ObservationIgnored
     private var useCase: HerosUseCaseProtocol

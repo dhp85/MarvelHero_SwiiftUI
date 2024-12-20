@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HerosRowView: View {
-    let hero: Result
+    let hero: ResultHeros
     
     var body: some View {
         ZStack {
@@ -16,7 +16,7 @@ struct HerosRowView: View {
                 image
                     .resizable()
                     .clipShape(RoundedRectangle(cornerRadius: 40))
-                    .overlay(RoundedRectangle(cornerRadius: 40).stroke(style: StrokeStyle(lineWidth: 4)))
+                    .overlay(RoundedRectangle(cornerRadius: 40).stroke(style: StrokeStyle(lineWidth: 2)))
                     .shadow(color: Color.black.opacity(1), radius: 20, x: 0, y: 20)
                 
             } placeholder: {
@@ -44,7 +44,7 @@ struct HerosRowView: View {
 }
 
 #Preview {
-    HerosRowView(hero: Result(
+    HerosRowView(hero: ResultHeros(
         id: 1001,
         name: "3-D Man",
         description: "A hero with spider-like abilities.",

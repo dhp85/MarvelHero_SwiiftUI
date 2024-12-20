@@ -13,12 +13,12 @@ enum NetworkHerosError: Error {
 }
 
 protocol NetworkHerosProtocol {
-    func getHeros() async throws -> [Result]
+    func getHeros() async throws -> [ResultHeros]
     
 }
     
 final class NetworkHeros: NetworkHerosProtocol {
-    func getHeros() async throws -> [Result] {
+    func getHeros() async throws -> [ResultHeros] {
         
         let baseURL = "\(ConstantApp.CONSTANT_API_URL)\(EndPoints.characters.rawValue)\(EndPoints.hash.rawValue)"
         var request = URLRequest(url: URL(string: baseURL)!)
@@ -43,9 +43,9 @@ final class NetworkHeros: NetworkHerosProtocol {
 
 
 final class NetworkHerosMock: NetworkHerosProtocol {
-    func getHeros() async throws -> [Result] {
+    func getHeros() async throws -> [ResultHeros] {
        
-        let hero1 = Result(
+        let hero1 = ResultHeros(
             id: 1001,
             name: "3D-Man",
             description: "A hero with spider-like abilities.",
@@ -59,7 +59,7 @@ final class NetworkHerosMock: NetworkHerosProtocol {
             urls: [URLElement(type: .detail, url: "https://marvel.com/characters/1001/spider-man")]
         )
 
-        let hero2 = Result(
+        let hero2 = ResultHeros(
             id: 1002,
             name: "A-Bomb",
             description: "A genius inventor and billionaire philanthropist.",

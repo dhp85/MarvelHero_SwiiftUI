@@ -40,13 +40,6 @@
 			remoteGlobalIDString = F7CFD4BF2D11C5700061158C;
 			remoteInfo = MarvelHero_SwiiftUI;
 		};
-		F7CFD4DC2D11C5710061158C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F7CFD4B82D11C5700061158C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F7CFD4BF2D11C5700061158C;
-			remoteInfo = MarvelHero_SwiiftUI;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -59,7 +52,6 @@
 		F7BE560A2D1444AF008CC9BF /* SeriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesView.swift; sourceTree = "<group>"; };
 		F7CFD4C02D11C5700061158C /* MarvelHero_SwiiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelHero_SwiiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7CFD4D12D11C5710061158C /* MarvelHero_SwiiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarvelHero_SwiiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F7CFD4DB2D11C5710061158C /* MarvelHero_SwiiftUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarvelHero_SwiiftUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7CFD4F42D11C60C0061158C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F7CFD4F62D11C60C0061158C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F7CFD4F82D11C60C0061158C /* MarvelHero_SwiiftUI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MarvelHero_SwiiftUI.entitlements; sourceTree = "<group>"; };
@@ -86,11 +78,6 @@
 			path = MarvelHero_SwiiftUITests;
 			sourceTree = "<group>";
 		};
-		F7CFD4DE2D11C5710061158C /* MarvelHero_SwiiftUIUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = MarvelHero_SwiiftUIUITests;
-			sourceTree = "<group>";
-		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,13 +89,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F7CFD4CE2D11C5710061158C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F7CFD4D82D11C5710061158C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -132,7 +112,6 @@
 			children = (
 				F7CFD4FA2D11C60C0061158C /* MarvelHero_SwiiftUI */,
 				F7CFD4D42D11C5710061158C /* MarvelHero_SwiiftUITests */,
-				F7CFD4DE2D11C5710061158C /* MarvelHero_SwiiftUIUITests */,
 				F7CFD4C12D11C5700061158C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -142,7 +121,6 @@
 			children = (
 				F7CFD4C02D11C5700061158C /* MarvelHero_SwiiftUI.app */,
 				F7CFD4D12D11C5710061158C /* MarvelHero_SwiiftUITests.xctest */,
-				F7CFD4DB2D11C5710061158C /* MarvelHero_SwiiftUIUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -343,29 +321,6 @@
 			productReference = F7CFD4D12D11C5710061158C /* MarvelHero_SwiiftUITests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		F7CFD4DA2D11C5710061158C /* MarvelHero_SwiiftUIUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F7CFD4EB2D11C5710061158C /* Build configuration list for PBXNativeTarget "MarvelHero_SwiiftUIUITests" */;
-			buildPhases = (
-				F7CFD4D72D11C5710061158C /* Sources */,
-				F7CFD4D82D11C5710061158C /* Frameworks */,
-				F7CFD4D92D11C5710061158C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F7CFD4DD2D11C5710061158C /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				F7CFD4DE2D11C5710061158C /* MarvelHero_SwiiftUIUITests */,
-			);
-			name = MarvelHero_SwiiftUIUITests;
-			packageProductDependencies = (
-			);
-			productName = MarvelHero_SwiiftUIUITests;
-			productReference = F7CFD4DB2D11C5710061158C /* MarvelHero_SwiiftUIUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -380,10 +335,6 @@
 						CreatedOnToolsVersion = 16.1;
 					};
 					F7CFD4D02D11C5710061158C = {
-						CreatedOnToolsVersion = 16.1;
-						TestTargetID = F7CFD4BF2D11C5700061158C;
-					};
-					F7CFD4DA2D11C5710061158C = {
 						CreatedOnToolsVersion = 16.1;
 						TestTargetID = F7CFD4BF2D11C5700061158C;
 					};
@@ -405,7 +356,6 @@
 			targets = (
 				F7CFD4BF2D11C5700061158C /* MarvelHero_SwiiftUI */,
 				F7CFD4D02D11C5710061158C /* MarvelHero_SwiiftUITests */,
-				F7CFD4DA2D11C5710061158C /* MarvelHero_SwiiftUIUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -421,13 +371,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F7CFD4CF2D11C5710061158C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F7CFD4D92D11C5710061158C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -472,13 +415,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F7CFD4D72D11C5710061158C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -486,11 +422,6 @@
 			isa = PBXTargetDependency;
 			target = F7CFD4BF2D11C5700061158C /* MarvelHero_SwiiftUI */;
 			targetProxy = F7CFD4D22D11C5710061158C /* PBXContainerItemProxy */;
-		};
-		F7CFD4DD2D11C5710061158C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F7CFD4BF2D11C5700061158C /* MarvelHero_SwiiftUI */;
-			targetProxy = F7CFD4DC2D11C5710061158C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -729,48 +660,6 @@
 			};
 			name = Release;
 		};
-		F7CFD4EC2D11C5710061158C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
-				MACOSX_DEPLOYMENT_TARGET = 15.1;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Diego.MarvelHero-SwiiftUIUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
-				TEST_TARGET_NAME = MarvelHero_SwiiftUI;
-				XROS_DEPLOYMENT_TARGET = 2.1;
-			};
-			name = Debug;
-		};
-		F7CFD4ED2D11C5710061158C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
-				MACOSX_DEPLOYMENT_TARGET = 15.1;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Diego.MarvelHero-SwiiftUIUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
-				TEST_TARGET_NAME = MarvelHero_SwiiftUI;
-				XROS_DEPLOYMENT_TARGET = 2.1;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -797,15 +686,6 @@
 			buildConfigurations = (
 				F7CFD4E92D11C5710061158C /* Debug */,
 				F7CFD4EA2D11C5710061158C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F7CFD4EB2D11C5710061158C /* Build configuration list for PBXNativeTarget "MarvelHero_SwiiftUIUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F7CFD4EC2D11C5710061158C /* Debug */,
-				F7CFD4ED2D11C5710061158C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

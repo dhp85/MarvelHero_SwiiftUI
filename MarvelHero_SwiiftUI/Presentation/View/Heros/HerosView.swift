@@ -23,6 +23,7 @@ struct HerosView: View {
                     .resizable()
                     .scaledToFill()
                     .ignoresSafeArea()
+                    .opacity(0.8)
                     
                 
                 
@@ -37,11 +38,10 @@ struct HerosView: View {
                             }
                             .padding(20)
                             .padding([.leading, .trailing], 40)
-                            //.buttonStyle(PlainButtonStyle())
                         }
                     }
                 }
-                .navigationTitle("Heroes")
+                .navigationTitle("Heroes Marvel")
             }
            
         }

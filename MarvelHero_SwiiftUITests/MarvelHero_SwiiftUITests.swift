@@ -5,31 +5,44 @@
 //  Created by Diego Herreros Parron on 17/12/24.
 //
 
-import XCTest
+import Testing
+@testable import MarvelHero_SwiiftUI
 
-final class MarvelHero_SwiiftUITests: XCTestCase {
+final class MarvelHero_SwiiftUITests {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    @Test("Test HerosModel")
+    func modelHeros() async throws {
+        
+        let modeloheroes = HerosModel(code: 1, status: "ok", copyright: "ok", attributionText: "atributionText", attributionHTML: "AtriburionHtml", etag: "Etag", data: DataClass(offset: 1, limit: 2, total: 3, count: 4, results: []))
+            #expect(modeloheroes != nil)
+            #expect(modeloheroes.status == "ok")
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    @Test("Test HerosModel, ResultHeros var imageUrl")
+    func modelHerosResults() throws {
+        
+        let modeloheroesresults = ResultHeros(id: 1, name: "Spiderman", description: "Amazing", modified: "ok", thumbnail: Thumbnail(path: "http", thumbnailExtension: Extension.jpg), resourceURI: "12344", comics: Comics(available: 1, collectionURI: "23", items: [], returned: 1), series: Comics(available: 3, collectionURI: "http", items: [], returned: 5), stories: Stories(available: 9, collectionURI: "http", items: [], returned: 2), events: Comics(available: 45, collectionURI: "http", items: [], returned: 4), urls: [])
+        let image = modeloheroesresults.imageUrl
+        #expect(image != nil)
+        #expect(modeloheroesresults != nil)
+        #expect(image?.absoluteString == "http/landscape_amazing.jpg")
+        
+        
+        
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        measure {
-            // Put the code you want to measure the time of here.
+    
+    @Suite("SeriesView testing", .serialized) struct SeriesViewTests {
+        @Test
+        func seriesView() throws {
+            let seriesView = SeriesView(vm: SeriesViewModel(idHero: 1, useCase: SeriesUseCaseMock()))
+            #expect(seriesView.body != nil)
+            
         }
     }
 
 }
+
+/*var imageUrl: URL? {
+ let urlString = "\(thumbnail.path)/landscape_amazing.\(thumbnail.thumbnailExtension.rawValue)"
+ return URL(string: urlString)
+}*/

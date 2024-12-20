@@ -13,14 +13,11 @@ struct SeriesView: View {
     
     var body: some View {
         ZStack {
-            
+            //Imagen de fondo.
             Image("Comics Marvel")
                 .resizable()
                 .ignoresSafeArea()
                 .opacity(0.6)
-                
-                
-            
             VStack {
                 // Título principal para la lista
                 Text("Series Heroe")
@@ -95,16 +92,15 @@ struct SeriesView: View {
                                 }
                                 
                             }
-                            
                             .padding(.vertical, 15)
-                            .background(Color.orange.opacity(0.3)) // Fondo de cada celda
+                            .background(Color.orange.opacity(0.3))
                             .cornerRadius(20)
                         }
                         
                     }
                     
                 }
-                .scrollContentBackground(.hidden)// Estilo de lista más moderno y organizado
+                .scrollContentBackground(.hidden)// Estilo de lista más moderno.
             }
         }
     }

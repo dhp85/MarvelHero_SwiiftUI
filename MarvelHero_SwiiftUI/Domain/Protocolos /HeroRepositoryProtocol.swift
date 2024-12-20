@@ -8,5 +8,5 @@
 import Foundation
 
 protocol HeroRepositoryProtocol {
-    func getHeros() async throws -> [Result]
+    func getHeros() async throws -> [ResultHeros]
 }

@@ -16,7 +16,7 @@ final class DefaultHerosRepository: HeroRepositoryProtocol {
     }
     
     
-    func getHeros() async throws -> [Result] {
+    func getHeros() async throws -> [ResultHeros] {
         return try await netWork.getHeros()
     }
 }

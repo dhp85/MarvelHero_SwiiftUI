@@ -9,7 +9,7 @@ import Foundation
 
 protocol HerosUseCaseProtocol {
     var repo: HeroRepositoryProtocol { get set }
-    func getHeros() async throws -> [Result]
+    func getHeros() async throws -> [ResultHeros]
 }
 
 
@@ -21,7 +21,7 @@ final class HerosUseCase: HerosUseCaseProtocol {
         self.repo = repo
     }
     
-    func getHeros() async throws -> [Result] {
+    func getHeros() async throws -> [ResultHeros] {
         return try await repo.getHeros()
     }
 }
@@ -35,7 +35,7 @@ final class HerosUseCaseMock: HerosUseCaseProtocol {
         self.repo = repo
     }
     
-    func getHeros() async throws -> [Result] {
+    func getHeros() async throws -> [ResultHeros] {
         return try await repo.getHeros()
     }
 }
