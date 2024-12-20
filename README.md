@@ -6,7 +6,7 @@ MarvelHeroes-SwiftUI es una aplicación desarrollada en SwiftUI que consume la A
 
 - **Lista de Héroes:** Muestra una lista de personajes de Marvel, obtenidos desde la API de Marvel.
 - **Detalle del Héroe:** Al seleccionar un héroe, se accede a una vista de detalle que incluye:
-  - Nombre del heroe.
+  - Nombre del héroe.
   - Imagen del héroe.
   - Lista de series en las que aparece, con:
     - Nombre de la serie.
