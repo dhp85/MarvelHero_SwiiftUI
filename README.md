@@ -1,6 +1,6 @@
 # MarvelHeroes-SwiftUI
 
-MarvelHeroes-SwiftUI es una aplicación desarrollada en SwiftUI que consume la API de Marvel para mostrar una lista de héroes y detalle donde incluye las series en las que aparecen. El proyecto sigue la arquitectura MVVM y utiliza `async/await` para manejar la concurrencia.
+MarvelHeroes-SwiftUI es una aplicación desarrollada en SwiftUI que consume la API de Marvel para mostrar una lista de héroes y detalle donde incluye las series en las que aparecen. El proyecto sigue la arquitectura MVVM y utiliza `async/await` para manejar operaciones asincronas.
 
 ## Características
 
