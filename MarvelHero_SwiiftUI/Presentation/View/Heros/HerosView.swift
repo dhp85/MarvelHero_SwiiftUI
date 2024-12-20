@@ -18,22 +18,34 @@ struct HerosView: View {
     
     var body: some View {
         NavigationStack {
-            ScrollView {
-                LazyVStack {
-                    ForEach(vm.heros, id: \.id) { hero in
-                        NavigationLink {
-                            SeriesView(vm: SeriesViewModel(idHero: hero.id))
-                           // Text("\(hero.id)")
-                        } label: {
-                            HerosRowView(hero: hero)
+            ZStack {
+                Image("Ciudad")
+                    .resizable()
+                    .scaledToFill()
+                    .ignoresSafeArea()
+                    
+                
+                
+                ScrollView {
+                    LazyVStack {
+                        ForEach(vm.heros, id: \.id) { hero in
+                            NavigationLink {
+                                SeriesView(vm: SeriesViewModel(idHero: hero.id))
+                               // Text("\(hero.id)")
+                            } label: {
+                                HerosRowView(hero: hero)
+                            }
+                            .padding(20)
+                            .padding([.leading, .trailing], 40)
+                            //.buttonStyle(PlainButtonStyle())
                         }
-                        .padding(20)
-                        .buttonStyle(PlainButtonStyle())
                     }
                 }
+                .navigationTitle("Heroes")
             }
-            .navigationTitle("Heroes")
+           
         }
+        .tint(Color.black)
     }
 }
 
