@@ -21,10 +21,13 @@ struct SeriesView: View {
             VStack {
                 // Título principal para la lista
                 Text("Series Heroe")
-                    .background(Color.white.opacity(0.8))
                     .font(.largeTitle)
                     .fontWeight(.bold)
-                    .padding(20)
+                    .padding()
+                    .background(Color.white.opacity(0.8), in: RoundedRectangle(cornerRadius: 40))
+                    
+                    
+                    
                 
                 List {
                     ForEach(vm.seriesList) { series in
