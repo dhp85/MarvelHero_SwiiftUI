@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F74EC72E2D462AF400071299 /* SeriesRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74EC72D2D462AF400071299 /* SeriesRowView.swift */; };
 		F7BE55FE2D142047008CC9BF /* NetworkHeroSeries.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BE55FD2D14203A008CC9BF /* NetworkHeroSeries.swift */; };
 		F7BE56002D14247F008CC9BF /* ModelSeries.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BE55FF2D14247A008CC9BF /* ModelSeries.swift */; };
 		F7BE56022D142D33008CC9BF /* SeriesRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BE56012D142D29008CC9BF /* SeriesRepositoryProtocol.swift */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F74EC72D2D462AF400071299 /* SeriesRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesRowView.swift; sourceTree = "<group>"; };
 		F7BE55FD2D14203A008CC9BF /* NetworkHeroSeries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHeroSeries.swift; sourceTree = "<group>"; };
 		F7BE55FF2D14247A008CC9BF /* ModelSeries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelSeries.swift; sourceTree = "<group>"; };
 		F7BE56012D142D29008CC9BF /* SeriesRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesRepositoryProtocol.swift; sourceTree = "<group>"; };
@@ -98,6 +100,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F74EC7282D462A1D00071299 /* Series */ = {
+			isa = PBXGroup;
+			children = (
+				F7BE560A2D1444AF008CC9BF /* SeriesView.swift */,
+				F74EC72D2D462AF400071299 /* SeriesRowView.swift */,
+			);
+			path = Series;
+			sourceTree = "<group>";
+		};
 		F7BE56072D14405A008CC9BF /* Heros */ = {
 			isa = PBXGroup;
 			children = (
@@ -159,8 +170,8 @@
 		F7CFD5002D11C6390061158C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F74EC7282D462A1D00071299 /* Series */,
 				F7BE56072D14405A008CC9BF /* Heros */,
-				F7BE560A2D1444AF008CC9BF /* SeriesView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -394,6 +405,7 @@
 				F7BE55FE2D142047008CC9BF /* NetworkHeroSeries.swift in Sources */,
 				F7BE56042D142D71008CC9BF /* DefaultSeriesRepository.swift in Sources */,
 				F7CFD5162D11C68F0061158C /* EndPoints.swift in Sources */,
+				F74EC72E2D462AF400071299 /* SeriesRowView.swift in Sources */,
 				F7D464D82D1328A400130D34 /* HerosRowView.swift in Sources */,
 				F7BE56062D143F66008CC9BF /* SeriesUseCase.swift in Sources */,
 				F7CFD5172D11C68F0061158C /* HttpMethods.swift in Sources */,
