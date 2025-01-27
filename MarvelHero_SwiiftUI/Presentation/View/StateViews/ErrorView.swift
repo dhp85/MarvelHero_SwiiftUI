@@ -19,6 +19,10 @@ struct ErrorView: View {
     
     var body: some View {
         VStack {
+            
+            Text("Oh, Fuck!")
+                .font(.title)
+            
             Image("DeadPool")
                 .resizable()
                 .frame(width: 300, height: 350)
