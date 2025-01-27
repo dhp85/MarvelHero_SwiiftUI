@@ -11,6 +11,7 @@ import SwiftUI
 
 struct HerosView: View {
     @State var vm: HerosViewModel
+    @State var filter: String = ""
 
     init (vm: HerosViewModel = HerosViewModel()) {
         self.vm = vm
@@ -40,9 +41,27 @@ struct HerosView: View {
                     }
                 }
                 .navigationTitle("Heroes Marvel")
+                .searchable(text: $vm.filterUI, prompt:"Buscar Heroes")
+                .onChange(of: vm.filterUI) { oldValue, newValue in
+                    if !newValue.isEmpty {
+                        Task {
+                         try await vm.searchHeros(search: newValue)
+                        }
+                    } else {
+                        Task {
+                            try await vm.getHeros()
+                        }
+                    }
+                }
             }
         }
         .tint(Color.black)
+        .onAppear {
+                  // Cambiar el estilo de la barra de búsqueda
+                  let searchField = UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self])
+                  searchField.backgroundColor = UIColor.white // Fondo blanco
+                  searchField.tintColor = UIColor.black // Color del cursor y la selección de texto
+              }
     }
 }
 

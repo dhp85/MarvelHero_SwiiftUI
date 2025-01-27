@@ -9,9 +9,12 @@ import Foundation
 
 @Observable
 final class HerosViewModel {
-    
+    var filterUI: String = ""
     var status: StatusApp = .none
     var heros: [ResultHeros] = []
+    var filterHeros: [ResultHeros] = []
+    
+    
     
     @ObservationIgnored
     private var useCase: HerosUseCaseProtocol
@@ -36,5 +39,14 @@ final class HerosViewModel {
             
         }
       
+    }
+    
+    @MainActor
+    func searchHeros(search: String) async throws {
+        
+            let data =  try await useCase.getHeros()
+            self.filterHeros = data
+            self.filterHeros = filterHeros.filter { $0.name.lowercased().contains(search.lowercased()) }
+            self.heros = filterHeros
     }
 }
