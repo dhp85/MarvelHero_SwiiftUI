@@ -24,15 +24,13 @@ struct HerosView: View {
                     .scaledToFill()
                     .ignoresSafeArea()
                     .opacity(0.8)
-                    
-                
                 
                 ScrollView {
                     LazyVStack {
                         ForEach(vm.heros, id: \.id) { hero in
                             NavigationLink {
                                 SeriesView(vm: SeriesViewModel(idHero: hero.id))
-                               // Text("\(hero.id)")
+                               
                             } label: {
                                 HerosRowView(hero: hero)
                             }
@@ -43,7 +41,6 @@ struct HerosView: View {
                 }
                 .navigationTitle("Heroes Marvel")
             }
-           
         }
         .tint(Color.black)
     }

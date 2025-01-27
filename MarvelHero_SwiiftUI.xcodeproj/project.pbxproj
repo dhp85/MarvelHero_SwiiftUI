@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		F74EC72E2D462AF400071299 /* SeriesRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74EC72D2D462AF400071299 /* SeriesRowView.swift */; };
+		F780F08E2D4668720025D6CE /* StatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F780F08D2D46685B0025D6CE /* StatusModel.swift */; };
+		F780F0962D46843F0025D6CE /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F780F0952D46843F0025D6CE /* ErrorView.swift */; };
+		F780F0B52D468B260025D6CE /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F780F0B42D468B260025D6CE /* RootView.swift */; };
+		F780F0B92D46B4E90025D6CE /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F780F0B82D46B4E90025D6CE /* SplashView.swift */; };
+		F7ABBEBC2D479A9900D24247 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ABBEBB2D479A9900D24247 /* LoadingView.swift */; };
 		F7BE55FE2D142047008CC9BF /* NetworkHeroSeries.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BE55FD2D14203A008CC9BF /* NetworkHeroSeries.swift */; };
 		F7BE56002D14247F008CC9BF /* ModelSeries.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BE55FF2D14247A008CC9BF /* ModelSeries.swift */; };
 		F7BE56022D142D33008CC9BF /* SeriesRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BE56012D142D29008CC9BF /* SeriesRepositoryProtocol.swift */; };
@@ -45,6 +50,11 @@
 
 /* Begin PBXFileReference section */
 		F74EC72D2D462AF400071299 /* SeriesRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesRowView.swift; sourceTree = "<group>"; };
+		F780F08D2D46685B0025D6CE /* StatusModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusModel.swift; sourceTree = "<group>"; };
+		F780F0952D46843F0025D6CE /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		F780F0B42D468B260025D6CE /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		F780F0B82D46B4E90025D6CE /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		F7ABBEBB2D479A9900D24247 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		F7BE55FD2D14203A008CC9BF /* NetworkHeroSeries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHeroSeries.swift; sourceTree = "<group>"; };
 		F7BE55FF2D14247A008CC9BF /* ModelSeries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelSeries.swift; sourceTree = "<group>"; };
 		F7BE56012D142D29008CC9BF /* SeriesRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesRepositoryProtocol.swift; sourceTree = "<group>"; };
@@ -109,6 +119,16 @@
 			path = Series;
 			sourceTree = "<group>";
 		};
+		F780F07D2D4667C20025D6CE /* StateViews */ = {
+			isa = PBXGroup;
+			children = (
+				F780F0952D46843F0025D6CE /* ErrorView.swift */,
+				F780F0B82D46B4E90025D6CE /* SplashView.swift */,
+				F7ABBEBB2D479A9900D24247 /* LoadingView.swift */,
+			);
+			path = StateViews;
+			sourceTree = "<group>";
+		};
 		F7BE56072D14405A008CC9BF /* Heros */ = {
 			isa = PBXGroup;
 			children = (
@@ -170,8 +190,10 @@
 		F7CFD5002D11C6390061158C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F780F07D2D4667C20025D6CE /* StateViews */,
 				F74EC7282D462A1D00071299 /* Series */,
 				F7BE56072D14405A008CC9BF /* Heros */,
+				F780F0B42D468B260025D6CE /* RootView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -213,6 +235,7 @@
 		F7CFD5082D11C6460061158C /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				F780F08D2D46685B0025D6CE /* StatusModel.swift */,
 				F7BE55FF2D14247A008CC9BF /* ModelSeries.swift */,
 				F7CFD5072D11C6460061158C /* ModelHeros.swift */,
 			);
@@ -403,19 +426,24 @@
 				F7CFD50C2D11C6460061158C /* Extension+URLRespnse.swift in Sources */,
 				F7CFD52D2D11EBB20061158C /* HerosView.swift in Sources */,
 				F7BE55FE2D142047008CC9BF /* NetworkHeroSeries.swift in Sources */,
+				F7ABBEBC2D479A9900D24247 /* LoadingView.swift in Sources */,
 				F7BE56042D142D71008CC9BF /* DefaultSeriesRepository.swift in Sources */,
 				F7CFD5162D11C68F0061158C /* EndPoints.swift in Sources */,
 				F74EC72E2D462AF400071299 /* SeriesRowView.swift in Sources */,
+				F780F0962D46843F0025D6CE /* ErrorView.swift in Sources */,
 				F7D464D82D1328A400130D34 /* HerosRowView.swift in Sources */,
 				F7BE56062D143F66008CC9BF /* SeriesUseCase.swift in Sources */,
+				F780F0B52D468B260025D6CE /* RootView.swift in Sources */,
 				F7CFD5172D11C68F0061158C /* HttpMethods.swift in Sources */,
 				F7CFD5182D11C68F0061158C /* NetworkHeros.swift in Sources */,
+				F780F0B92D46B4E90025D6CE /* SplashView.swift in Sources */,
 				F7CFD5222D11D5B20061158C /* HeroRepositoryProtocol.swift in Sources */,
 				F7CFD5242D11D6090061158C /* DefaultHerosRepository.swift in Sources */,
 				F7CFD5192D11C68F0061158C /* HttpResponse.swift in Sources */,
 				F7BE56022D142D33008CC9BF /* SeriesRepositoryProtocol.swift in Sources */,
 				F7CFD50D2D11C6460061158C /* ConstantApp.swift in Sources */,
 				F7CFD5272D11D7020061158C /* HerosUseCase.swift in Sources */,
+				F780F08E2D4668720025D6CE /* StatusModel.swift in Sources */,
 				F7BE560B2D1444AF008CC9BF /* SeriesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

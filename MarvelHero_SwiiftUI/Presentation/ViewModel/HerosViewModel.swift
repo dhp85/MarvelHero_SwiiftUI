@@ -10,7 +10,7 @@ import Foundation
 @Observable
 final class HerosViewModel {
     
-    
+    var status: StatusApp = .none
     var heros: [ResultHeros] = []
     
     @ObservationIgnored
@@ -25,7 +25,16 @@ final class HerosViewModel {
     
     @MainActor
     func getHeros() async throws  {
-        let data =  try await useCase.getHeros()
-        self.heros = data
+        self.status = .loading
+        do {
+            let data =  try await useCase.getHeros()
+            self.heros = data
+            self.status = .loaded
+        } catch {
+            self.status = .error(error: "Error del servidor")
+            print("Error: \(error)")
+            
+        }
+      
     }
 }

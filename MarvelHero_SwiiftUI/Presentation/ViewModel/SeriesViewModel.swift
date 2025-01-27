@@ -10,6 +10,7 @@ import Foundation
 @Observable
 final class SeriesViewModel{
     
+    var status: StatusApp = .none
     var seriesList: [ResultSeries] = []
     var idHero: Int = 0
     
@@ -19,16 +20,24 @@ final class SeriesViewModel{
     init(idHero: Int,useCase: SeriesUseCaseProtocol = SeriesUseCase()) {
         self.useCase = useCase
         self.idHero = idHero
+    }
+        /*Task {
+         try await getSeriesHero(idHero: idHero)
+         }
+         }*/
         
-        Task {
-            try await getSeriesHero(idHero: idHero)
+        @MainActor
+        func getSeriesHero(idHero: Int) async throws {
+            self.status = .loading
+            
+            do {
+                let series = try await useCase.getSeriesHero(idHero: idHero)
+                self.seriesList = series
+                self.status = .loaded
+            } catch {
+                self.status = .error(error: "Error en el servidor")
+                print("Error al obtener series")
+            }
         }
     }
-    
-    @MainActor
-    func getSeriesHero(idHero: Int) async throws {
-        
-        let series = try await useCase.getSeriesHero(idHero: idHero)
-        self.seriesList = series
-    }
-}
+

@@ -22,7 +22,7 @@ final class NetworkHeros: NetworkHerosProtocol {
         
         let baseURL = "\(ConstantApp.CONSTANT_API_URL)\(EndPoints.characters.rawValue)\(ConstantApp.API_KEY)\(EndPoints.hash.rawValue)\(ConstantApp.HASH)"
         var request = URLRequest(url: URL(string: baseURL)!)
-        request.httpMethod = "GET"
+        request.httpMethod = "GET" // aqui va GET
         
         do {
             let (data, response) = try await URLSession.shared.data(for: request)
