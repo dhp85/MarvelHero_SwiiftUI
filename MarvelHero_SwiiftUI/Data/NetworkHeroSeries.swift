@@ -166,7 +166,7 @@ final class NetworkHeroSeriesMock: NetworkHeroSeriesProtocol {
         if idHero == 1 {
             return [mockResultSeries1, mockResultSeries2]
         } else {
-            return []
+            throw NetworkHerosError.invalidData
         }
     }
 }

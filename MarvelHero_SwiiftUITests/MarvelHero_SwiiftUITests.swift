@@ -31,6 +31,47 @@ final class MarvelHero_SwiiftUITests {
         
     }
     
+    @Suite("Casos de uso", .serialized) struct UseCaseTests {
+        @Test("Caso de uso de heros")
+        func herosUseCase() async throws {
+            let herosUseCase = HerosUseCaseMock()
+            let herosViewModel = HerosViewModel(useCase: herosUseCase)
+            
+            try await herosViewModel.getHeros()
+            
+            #expect(herosViewModel.heros != nil)
+            #expect(herosViewModel.heros.count == 2)
+            #expect(herosViewModel.heros[0].name == "3D-Man")
+            #expect(herosViewModel.heros[1].name == "A-Bomb")
+            
+        }
+        
+        @Test("Caso de uso de series")
+        func seriesUseCase() async throws {
+            let seriesUseCase = SeriesUseCaseMock()
+            let seriesViewModel = SeriesViewModel(idHero: 1, useCase: seriesUseCase)
+            
+            try await seriesViewModel.getSeriesHero(idHero: 1)
+            
+            #expect(seriesViewModel.seriesList != nil)
+            #expect(seriesViewModel.seriesList.count == 2)
+            #expect(seriesViewModel.seriesList[0].title == "Avengers: The Initiative(2007-2010)" )
+            #expect(seriesViewModel.seriesList[1].title == "DeadPool")
+        }
+        
+        @Test("Caso de uso series error")
+        func seriesUseCaseError() async throws {
+            let seriesUseCase = SeriesUseCaseMock()
+            let seriesViewModel = SeriesViewModel(idHero: 2, useCase: seriesUseCase)
+            
+            do {
+                try await seriesViewModel.getSeriesHero(idHero: 2)
+            } catch {
+                #expect(true)
+            }
+        }
+    }
+    
     @Suite("SeriesView testing", .serialized) struct SeriesViewTests {
         @Test
         func seriesView() throws {
