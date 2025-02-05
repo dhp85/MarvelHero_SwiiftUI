@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum NetworkHerosError: Error {
+enum NetworkHerosError: Error, Equatable {
     case invalidResponse
     case invalidData
 }

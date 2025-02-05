@@ -12,7 +12,7 @@ final class SeriesViewModel{
     
     var status: StatusApp = .none
     var seriesList: [ResultSeries] = []
-    var idHero: Int = 0
+    var idHero: Int
     
     @ObservationIgnored
     private var useCase: SeriesUseCaseProtocol
@@ -36,7 +36,8 @@ final class SeriesViewModel{
                 self.status = .loaded
             } catch {
                 self.status = .error(error: "Error en el servidor")
-                print("Error al obtener series")
+                throw NetworkHerosError.invalidData
+                
             }
         }
     }

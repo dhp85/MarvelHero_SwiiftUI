@@ -36,6 +36,7 @@ final class HerosViewModel {
         } catch {
             self.status = .error(error: "Error del servidor")
             print("Error: \(error)")
+            throw NetworkHerosError.invalidData
             
         }
       
