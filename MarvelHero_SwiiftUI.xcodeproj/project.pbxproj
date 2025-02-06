@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F74EC72E2D462AF400071299 /* SeriesRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74EC72D2D462AF400071299 /* SeriesRowView.swift */; };
+		F7576FE52D54A80100CCE980 /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = F7576FE42D54A80100CCE980 /* ViewInspector */; };
 		F780F08E2D4668720025D6CE /* StatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F780F08D2D46685B0025D6CE /* StatusModel.swift */; };
 		F780F0962D46843F0025D6CE /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F780F0952D46843F0025D6CE /* ErrorView.swift */; };
 		F780F0B52D468B260025D6CE /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F780F0B42D468B260025D6CE /* RootView.swift */; };
@@ -104,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7576FE52D54A80100CCE980 /* ViewInspector in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,6 +352,7 @@
 			);
 			name = MarvelHero_SwiiftUITests;
 			packageProductDependencies = (
+				F7576FE42D54A80100CCE980 /* ViewInspector */,
 			);
 			productName = MarvelHero_SwiiftUITests;
 			productReference = F7CFD4D12D11C5710061158C /* MarvelHero_SwiiftUITests.xctest */;
@@ -383,6 +386,9 @@
 			);
 			mainGroup = F7CFD4B72D11C5700061158C;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				F7576FE32D54A80100CCE980 /* XCRemoteSwiftPackageReference "ViewInspector" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = F7CFD4C12D11C5700061158C /* Products */;
 			projectDirPath = "";
@@ -731,6 +737,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F7576FE32D54A80100CCE980 /* XCRemoteSwiftPackageReference "ViewInspector" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nalexn/ViewInspector";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.10.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F7576FE42D54A80100CCE980 /* ViewInspector */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F7576FE32D54A80100CCE980 /* XCRemoteSwiftPackageReference "ViewInspector" */;
+			productName = ViewInspector;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F7CFD4B82D11C5700061158C /* Project object */;
 }

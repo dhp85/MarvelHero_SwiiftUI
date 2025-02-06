@@ -7,11 +7,14 @@
 
 import Testing
 import Foundation
+import ViewInspector
+import SwiftUI
 
 @testable import MarvelHero_SwiiftUI
 
 final class MarvelHero_SwiiftUITests {
     
+    //MARK: -TESTING MODELOS.
     
     @Test("Test HerosModel")
     func modelHeros() async throws {
@@ -48,6 +51,8 @@ final class MarvelHero_SwiiftUITests {
         #expect(image?.absoluteString == "http.extension")
     }
     
+    // MARK: -TESTING CASOS DE USO.
+    
     @Suite("Casos de uso", .serialized) struct UseCaseTests {
         @Test("Caso de uso de heros")
         func herosUseCase() async throws {
@@ -63,12 +68,13 @@ final class MarvelHero_SwiiftUITests {
             
         }
         @Test("Test funcion searchHeros")
-        func search() async throws {
+        func searchHero() async throws {
             let herosUseCase = HerosUseCaseMock()
             let herosViewModel = HerosViewModel(useCase: herosUseCase)
             try await herosViewModel.searchHeros(search: "A-")
             #expect(herosViewModel.filterHeros != nil)
             #expect(herosViewModel.filterHeros.count == 1)
+            #expect(herosViewModel.filterHeros[0].name == "A-Bomb")
         }
         
         @Test("Caso de uso de series")
@@ -86,7 +92,7 @@ final class MarvelHero_SwiiftUITests {
         
         @Test("Caso de uso series error")
         func seriesUseCaseError() async throws {
-            let idError = 2 //  ID que causa error. Al ser diferente a 1 causa un error. Esta implementado en el Mock.
+            let idError = 2 //  ID que causa error. Al ser diferente a 1 causa un error. Esta implementado en SeriesUseCaseMock.
             let seriesUseCase = SeriesUseCaseMock()
             let seriesViewModel = SeriesViewModel(idHero: idError, useCase: seriesUseCase)
             
@@ -102,6 +108,10 @@ final class MarvelHero_SwiiftUITests {
         }
     }
     
+    
+    
+    // MARK: -TESTING DE SERIESVIEW.
+    
     @Suite("SeriesView testing", .serialized) struct SeriesViewTests {
         @Test
         @MainActor
@@ -110,6 +120,63 @@ final class MarvelHero_SwiiftUITests {
             #expect(seriesView.body != nil)
             
         }
+        
+        @Test("SeriesView State.none")
+        @MainActor
+        func testSeriesView_whenStateIsNone() throws {
+            let mockVM = SeriesViewModel(idHero: 1, useCase: SeriesUseCaseMock())
+            mockVM.status = .none
+              let view = SeriesView(vm: mockVM)
+            let inspectedView = try view.inspect()
+            
+            print(inspectedView)
+            let textView = try inspectedView.find(text: "Loading...")
+            try textView.callOnAppear()
+            
+              
+            #expect(try textView.string() == "Loading...")
+          }
+        
+        @Test("SeriesView State.Loading")
+        @MainActor
+        func testSeriesView_whenStateIsLoading() throws {
+            let mockVM = SeriesViewModel(idHero: 1, useCase: SeriesUseCaseMock())
+            mockVM.status = .loading
+              let view = SeriesView(vm: mockVM)
+            let inspectedView = try view.inspect()
+            let loadingView = try inspectedView.find(LoadingView.self)
+            
+            #expect(loadingView != nil)
+          }
+        
+        @Test("SeriesView State.Loaded")
+        @MainActor
+        func testSeriesView_whenStateIsLoaded() throws {
+            let mockVM = SeriesViewModel(idHero: 1, useCase: SeriesUseCaseMock())
+            mockVM.status = .loaded
+              let view = SeriesView(vm: mockVM)
+            let inspectedView = try view.inspect()
+            
+            let titleText = try inspectedView.find(text: "Series Heroe")
+            
+            #expect(try titleText.string() == "Series Heroe")
+            
+          }
+        
+        @Test("SeriesView State.Error")
+        @MainActor
+        func testSeriesView_whenStateIsError() throws {
+            let mockVM = SeriesViewModel(idHero: 1, useCase: SeriesUseCaseMock())
+             mockVM.status = .error(error: "error")
+              
+            let view = SeriesView(vm: mockVM)
+            let inspectedView = try view.inspect()
+            
+            let errorView = try inspectedView.find(ErrorView.self)
+            
+            #expect(errorView != nil)
+            
+          }
     }
 
 }

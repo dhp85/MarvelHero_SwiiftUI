@@ -6,13 +6,14 @@
 //
 
 import Foundation
+import Combine
 
 @Observable
 final class SeriesViewModel{
     
-    var status: StatusApp = .none
-    var seriesList: [ResultSeries] = []
-    var idHero: Int
+     var status: StatusApp = .none
+     var seriesList: [ResultSeries] = []
+     var idHero: Int
     
     @ObservationIgnored
     private var useCase: SeriesUseCaseProtocol
