@@ -40,7 +40,7 @@ MarvelHeroes-SwiftUI es una aplicación desarrollada en SwiftUI que consume la A
 3. Crear el hash MD5 si no lo tienes. Si lo tienes, pasa al siguiente punto.
 4. Dentro del proyecto en Domain/Tools/ConstantApp aqui se encuentran las constantes de API_KEY_PUBLIC, aqui pegar vuestra clave publica que os suministra la web de Marvel una vez te registras y en la constante CONSTANT_HASH pegas el hash creado. Ya estaria lista para funcionar con la API de Marvel. Espero que os guste.
 5. Si no tienes el hash MD5, necesitas crearlo en la siguiente pagina web https://www.md5hashgenerator.com o cualquier web que genere hash MD5. Introduce los datos de esta manera (1+privateKey+publicKey) quitando los simbolos de mas, pulsa generar y te devuelve un hash, este hash es el que debes pegar en la constante CONSTANT_HASH.
-
+6. Elegir un dispositivo apropiado en el simulador, las pruebas las hice en un iPhone 16 Pro. Si no seleccionas un dispositivo iphone en la barra superior del proyecto, puede que te de errores en el compilador.
 
 ## Proximas Mejoras
 
