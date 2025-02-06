@@ -4,21 +4,28 @@ MarvelHeroes-SwiftUI es una aplicación desarrollada en SwiftUI que consume la A
 
 ## Características
 
-- **Lista de Héroes:** Muestra una lista de personajes de Marvel, obtenidos desde la API de Marvel.Incluye:
+- **Lista de Héroes:** Muestra una lista de personajes de Marvel obtenidos desde la API de Marvel. Incluye:
   - Nombre del héroe.
   - Imagen del héroe.
+  
 - **Detalle del Héroe:** Al seleccionar un héroe, se accede a una vista de detalle que incluye:
-  - Lista de series en las que aparece, con:
+  - Lista de series en las que aparece el héroe, con:
     - Nombre de la serie.
     - Imagen de la serie.
     - Descripción de la serie.
+  
+  Además, incluye diferentes **estados de vista**, como:
+  - **Estado de carga**: Muestra un indicador de carga mientras se obtienen los datos.
+  - **Estado de error**: Muestra un mensaje de error si algo sale mal (por ejemplo, si la solicitud a la API falla).
+  - **Vista splash**: Una pantalla inicial que se muestra al iniciar la aplicación o antes de transitar a la vista principal, mostrando una introducción o el logo.
 
 ## Tecnologías Utilizadas
 
 - **SwiftUI:** Para la construcción de la interfaz de usuario.
 - **MVVM (Model-View-ViewModel):** Arquitectura utilizada para separar la lógica de negocio de la presentación.
-- **Async/Await:** Manejo de operaciones asincronas, permitiendo escribir codigo mas claro y legible al pausar y reanudar tareas como si fueran sincronas.
+- **Async/Await:** Manejo de operaciones asincrónicas, permitiendo escribir código más claro y legible al pausar y reanudar tareas como si fueran sincrónicas.
 - **Marvel API:** Proporciona los datos de los personajes y series.
+- **SwiftTesting:** Framework utilizado para realizar pruebas unitarias y de integración, asegurando el correcto funcionamiento de la aplicación y su lógica.
 
 ## Configuración
 
@@ -37,10 +44,10 @@ MarvelHeroes-SwiftUI es una aplicación desarrollada en SwiftUI que consume la A
 
 ## Proximas Mejoras
 
-1. Implementar busquedas para filtrar héroes por nombre.
+1. Cachear imágenes y datos para mejorar el rendimiento de la aplicación.
 2. Agregar paginación en la lista de héroes.
 3. Mejorar el diseño visual de las vistas para adaptarse mejor a diferentes tamaños de pantalla.
-4. Cachear imágenes y datos para mejorar el rendimiento de la aplicación.
+
 
 ## Creditos
 
