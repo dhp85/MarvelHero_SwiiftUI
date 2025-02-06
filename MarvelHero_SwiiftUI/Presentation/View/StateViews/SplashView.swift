@@ -9,58 +9,62 @@ import SwiftUI
 
 struct SplashView: View {
     
-    @State private var isAnimating = false
-
+    @State private var isAnimatingLogo = false
+    @State private var isAnimatingSpinner = false
+    
     var body: some View {
-        ZStack {
-            // Fondo de la ciudad
-            Image("Ciudad")
-                .resizable()
-                .ignoresSafeArea(.all)
-                .opacity(0.8)
-            
-            VStack {
-                Spacer() // Empuja el contenido hacia abajo
-
-                // Aquí va el logo
-                Image("LogoMarvel")
+        GeometryReader { geometry in
+            ZStack {
+                
+                Image("Ciudad")
                     .resizable()
-                    .frame(width: 250, height: 200)
-                    .padding()
+                    .ignoresSafeArea()
+                    .scaledToFill()
+                    .frame(width: geometry.size.width, height: geometry.size.height)
+                    .opacity(0.7) 
                 
-                Spacer() // Agregar otro espacio para separar el spinner del logo
-                
-                ZStack {
-                    Circle()
-                        .stroke(Color.white.opacity(0.3), lineWidth: 10)
-                        .frame(width: 80, height: 80)
+                VStack {
+                    Spacer()
                     
-                    Circle()
-                        .trim(from: 0.0, to: 0.8) // Solo una parte del círculo
-                        .stroke(Color.white, lineWidth: 8)
-                        .frame(width: 80, height: 80)
-                        .rotationEffect(Angle(degrees: isAnimating ? 360 : 0))
-                        .animation(
-                            Animation.linear(duration: 1.0)
-                                .repeatForever(autoreverses: false),
-                            value: isAnimating
-                        )
-                }
-                .onAppear {
-                    isAnimating = true
-                }
-                
-                // Texto opcional debajo del spinner
-                Text("Cargando...")
-                    .foregroundColor(.white)
-                    .font(.headline)
-                    .padding(.top, 20)
-                    .padding(.bottom, 40) // Deja un espacio adicional en la parte inferior
+                    // Logo con animación de escala
+                    Image("LogoMarvel")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: geometry.size.width * 0.5)
+                        .padding(.bottom, 30)
+                        .scaleEffect(isAnimatingLogo ? 1.1 : 1)
+                        .opacity(isAnimatingLogo ? 1 : 0)
+                        .animation(.easeIn(duration: 1), value: isAnimatingLogo)
+                    
+                    Spacer()
+                    
+                    // Spinner animado
+                    ZStack {
+                        Circle()
+                            .stroke(Color.white.opacity(0.3), lineWidth: 10)
+                            .frame(width: 80, height: 80)
+                        
+                        Circle()
+                            .trim(from: 0.0, to: 0.8)
+                            .stroke(Color.white, lineWidth: 8)
+                            .frame(width: 80, height: 80)
+                            .rotationEffect(Angle(degrees: isAnimatingSpinner ? 360 : 0))
+                            .animation(
+                                Animation.linear(duration: 1.5)
+                                    .repeatForever(autoreverses: false),
+                                value: isAnimatingSpinner
+                            )
+                    }
+                    .onAppear {
+                        isAnimatingLogo = true
+                        isAnimatingSpinner = true
+                    }
+                    .padding(.bottom, 30)
+                   }
             }
         }
     }
 }
-
 #Preview {
     SplashView()
 }

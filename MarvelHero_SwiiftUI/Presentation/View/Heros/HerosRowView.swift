@@ -12,12 +12,17 @@ struct HerosRowView: View {
     
     var body: some View {
         ZStack {
+            
+            Color.gray
+                .clipShape(RoundedRectangle(cornerRadius: 40))
+                .offset(y: 12)
+            
             AsyncImage(url: hero.imageUrl) { image in
                 image
                     .resizable()
                     .clipShape(RoundedRectangle(cornerRadius: 40))
-                    .overlay(RoundedRectangle(cornerRadius: 40).stroke(style: StrokeStyle(lineWidth: 2)))
-                    .shadow(color: Color.black.opacity(1), radius: 20, x: 0, y: 20)
+                    .overlay(RoundedRectangle(cornerRadius: 40).stroke(style: StrokeStyle(lineWidth: 1)))
+                    .shadow(color: Color.black.opacity(0.6), radius: 20, x: 0, y: 20)
                 
             } placeholder: {
                 ProgressView()
@@ -25,6 +30,8 @@ struct HerosRowView: View {
             
             LinearGradient(gradient: Gradient(colors: [Color.black.opacity(1.8), Color.clear]), startPoint: .top, endPoint: .center)
                 .clipShape(RoundedRectangle(cornerRadius: 40))
+            
+            
             
             VStack {
                 HStack {
@@ -57,4 +64,5 @@ struct HerosRowView: View {
         events: Comics(available: 2, collectionURI: "http://gateway.marvel.com/events", items: [], returned: 2),
         urls: [URLElement(type: .detail, url: "https://marvel.com/characters/1001/spider-man")]
     ))
+    .padding()
 }

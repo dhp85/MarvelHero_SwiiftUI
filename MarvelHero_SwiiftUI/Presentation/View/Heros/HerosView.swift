@@ -24,7 +24,8 @@ struct HerosView: View {
                     .resizable()
                     .scaledToFill()
                     .ignoresSafeArea()
-                    .opacity(0.8)
+                    .opacity(0.6)
+                    .blur(radius: 5)
                 
                 ScrollView {
                     LazyVStack {
@@ -35,8 +36,8 @@ struct HerosView: View {
                             } label: {
                                 HerosRowView(hero: hero)
                             }
-                            .padding(20)
-                            .padding([.leading, .trailing], 40)
+                            .padding()
+                            .padding([.leading, .trailing], 50)
                             .transition(.asymmetric(insertion: .move(edge: .bottom).combined(with: .opacity),
                                                     removal: .move(edge: .bottom).combined(with: .opacity)))
                                 }
