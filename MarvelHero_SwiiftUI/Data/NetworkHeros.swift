@@ -43,6 +43,9 @@ final class NetworkHeros: NetworkHerosProtocol {
 
 
 final class NetworkHerosMock: NetworkHerosProtocol {
+    
+    
+    
     func getHeros() async throws -> [ResultHeros] {
        
         let hero1 = ResultHeros(

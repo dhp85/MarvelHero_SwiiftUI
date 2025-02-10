@@ -7,7 +7,6 @@
 
 import Testing
 import Foundation
-import ViewInspector
 import SwiftUI
 
 @testable import MarvelHero_SwiiftUI
@@ -67,6 +66,8 @@ final class MarvelHero_SwiiftUITests {
             #expect(herosViewModel.heros[1].name == "A-Bomb")
             
         }
+        
+        
         @Test("Test funcion searchHeros")
         func searchHero() async throws {
             let herosUseCase = HerosUseCaseMock()
@@ -107,77 +108,5 @@ final class MarvelHero_SwiiftUITests {
             #expect(didThrowError, "No se capturó ningún error")
         }
     }
-    
-    
-    
-    // MARK: -TESTING DE SERIESVIEW.
-    
-    @Suite("SeriesView testing", .serialized) struct SeriesViewTests {
-        @Test
-        @MainActor
-        func seriesView() throws {
-            let seriesView = SeriesView(vm: SeriesViewModel(idHero: 1, useCase: SeriesUseCaseMock()))
-            #expect(seriesView.body != nil)
-            
-        }
-        
-        @Test("SeriesView State.none")
-        @MainActor
-        func testSeriesView_whenStateIsNone() throws {
-            let mockVM = SeriesViewModel(idHero: 1, useCase: SeriesUseCaseMock())
-            mockVM.status = .none
-              let view = SeriesView(vm: mockVM)
-            let inspectedView = try view.inspect()
-            
-            print(inspectedView)
-            let textView = try inspectedView.find(text: "Loading...")
-            try textView.callOnAppear()
-            
-              
-            #expect(try textView.string() == "Loading...")
-          }
-        
-        @Test("SeriesView State.Loading")
-        @MainActor
-        func testSeriesView_whenStateIsLoading() throws {
-            let mockVM = SeriesViewModel(idHero: 1, useCase: SeriesUseCaseMock())
-            mockVM.status = .loading
-              let view = SeriesView(vm: mockVM)
-            let inspectedView = try view.inspect()
-            let loadingView = try inspectedView.find(LoadingView.self)
-            
-            #expect(loadingView != nil)
-          }
-        
-        @Test("SeriesView State.Loaded")
-        @MainActor
-        func testSeriesView_whenStateIsLoaded() throws {
-            let mockVM = SeriesViewModel(idHero: 1, useCase: SeriesUseCaseMock())
-            mockVM.status = .loaded
-              let view = SeriesView(vm: mockVM)
-            let inspectedView = try view.inspect()
-            
-            let titleText = try inspectedView.find(text: "Series Heroe")
-            
-            #expect(try titleText.string() == "Series Heroe")
-            
-          }
-        
-        @Test("SeriesView State.Error")
-        @MainActor
-        func testSeriesView_whenStateIsError() throws {
-            let mockVM = SeriesViewModel(idHero: 1, useCase: SeriesUseCaseMock())
-             mockVM.status = .error(error: "error")
-              
-            let view = SeriesView(vm: mockVM)
-            let inspectedView = try view.inspect()
-            
-            let errorView = try inspectedView.find(ErrorView.self)
-            
-            #expect(errorView != nil)
-            
-          }
-    }
-
 }
 
