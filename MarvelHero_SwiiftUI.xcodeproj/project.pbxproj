@@ -284,13 +284,6 @@
 			path = Repository;
 			sourceTree = "<group>";
 		};
-		F7CFD5142D11C68F0061158C /* Local */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Local;
-			sourceTree = "<group>";
-		};
 		F7CFD5152D11C68F0061158C /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -298,7 +291,6 @@
 				F7CFD50E2D11C68F0061158C /* NetworkHeros.swift */,
 				F7CFD5122D11C68F0061158C /* BaseNetwork */,
 				F7CFD5132D11C68F0061158C /* Repository */,
-				F7CFD5142D11C68F0061158C /* Local */,
 			);
 			path = Data;
 			sourceTree = "<group>";
